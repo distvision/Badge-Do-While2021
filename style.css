@@ -104,7 +104,7 @@ a {
 }
 
 a.git img {
-  content: url(/images/github\ 2.svg);
+  content: url(./images/github\ 2.svg);
 }
 
 a.light {
@@ -120,7 +120,7 @@ a.light {
 }
 
 a.light img {
-  content: url(/images/githubblack.svg);
+  content: url(./images/githubblack.svg);
 }
 
 p {
@@ -137,7 +137,7 @@ p {
 }
 
 .container.light .links a img {
-  content: url(/images/Instagramwhite.svg);
+  content: url(./images/Instagramwhite.svg);
   box-shadow: 0 5px 20px rgba(104, 104, 104, 0.433);
 }
 
@@ -158,7 +158,7 @@ p {
 }
 
 .toggle::before {
-  content: url(/images/brightness.png);
+  content: url(./images/brightness.png);
 }
 
 section.light .toggle {
@@ -175,7 +175,7 @@ section.light .toggle {
 }
 
 section.light .toggle::before {
-  content: url(/images/night-mode.png);
+  content: url(./images/night-mode.png);
 }
 
 /* Breakponit */
@@ -285,7 +285,7 @@ section.light .toggle::before {
   }
 
   a.git img {
-    content: url(/images/github\ 2.svg);
+    content: url(./images/github\ 2.svg);
     height: 1.5rem;
     width: 1.5rem;
   }
@@ -304,7 +304,7 @@ section.light .toggle::before {
   }
 
   a.light img {
-    content: url(/images/githubblack.svg);
+    content: url(./images/githubblack.svg);
     height: 1.5rem;
     width: 1.5rem;
   }
@@ -390,7 +390,8 @@ section.light .toggle::before {
   }
 
   a.git img {
-    content: url(/images/github\ 2.svg);
+    content: url(./images/github2.svg);
+    /* background: url(/images/github2.svg) no-repeat center/cover; */
   }
 
   a.light {
@@ -406,7 +407,7 @@ section.light .toggle::before {
   }
 
   a.light img {
-    content: url(/images/githubblack.svg);
+    content: url(./images/githubblack.svg);
   }
 
   p {
@@ -430,7 +431,7 @@ section.light .toggle::before {
   }
 
   .toggle::before {
-    content: url(/images/brightness.png);
+    content: url(./images/brightness.png);
   }
 
   section.light .toggle {
@@ -447,6 +448,6 @@ section.light .toggle::before {
   }
 
   section.light .toggle::before {
-    content: url(/images/night-mode.png);
+    content: url(./images/night-mode.png);
   }
 }
