@@ -14,25 +14,53 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-body {
-  display: grid;
-  place-items: center;
+main {
   background: hsl(240, 6%, 13%);
+  transition: background 0.5s;
 }
 
-main {
-  background: url(images/Mobile_bg.png) no-repeat;
-  width: 375px;
-  height: 100vh;
+main.light {
+  background: var(--grey);
+}
+
+section {
+  display: grid;
+  position: relative;
+  background: url(images/background.svg) no-repeat center/cover;
+  background-position-y: -50px;
+  width: 100vw;
+  min-height: 100vh;
+  transition: background 0.5s;
+}
+
+section.light {
+  position: relative;
+  background: url(images/background1.svg) no-repeat center/cover;
+  background-position-y: -50px;
+  width: 100vw;
+  min-height: 100vh;
+  /* height: 100vh; */
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.11);
 }
 
 .container {
   max-width: 250px;
+  margin-top: -61px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
 
   color: var(--grey);
+}
+
+.container.light {
+  max-width: 250px;
+  margin-top: -61px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  color: var(--black);
 }
 
 .avatar {
@@ -75,16 +103,350 @@ a {
   margin-top: 0.25rem;
 }
 
+a.git img {
+  content: url(/images/github\ 2.svg);
+}
+
+a.light {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+
+  color: var(--black);
+  text-decoration: none;
+
+  margin-top: 0.25rem;
+}
+
+a.light img {
+  content: url(/images/githubblack.svg);
+}
+
 p {
   margin-top: 2rem;
 }
 
 .links ul {
-  /* position: absolute; */
   margin-top: 2rem;
   display: flex;
   gap: 0.5rem;
   justify-content: center;
   align-items: center;
   list-style: none;
+}
+
+.container.light .links a img {
+  content: url(/images/Instagramwhite.svg);
+  box-shadow: 0 5px 20px rgba(104, 104, 104, 0.433);
+}
+
+.toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(122.5deg, #ff0095 15.69%, #ffce1e 107.51%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0 0px 25px rgba(124, 71, 2, 0.159);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.toggle::before {
+  content: url(/images/brightness.png);
+}
+
+section.light .toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+section.light .toggle::before {
+  content: url(/images/night-mode.png);
+}
+
+/* Breakponit */
+
+@media (min-width: 375px) {
+  section {
+    display: grid;
+    position: relative;
+    background: url(images/background.svg) no-repeat center/cover;
+    background-position-y: -70px;
+    width: 100vw;
+    min-height: 100vh;
+    transition: background 0.5s;
+  }
+
+  section.light {
+    position: relative;
+    background: url(images/background1.svg) no-repeat center/cover;
+    background-position-y: -70px;
+    width: 100vw;
+    min-height: 100vh;
+    /* height: 100vh; */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.11);
+  }
+
+  .container {
+    max-width: 250px;
+    margin-top: -70px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    color: var(--grey);
+  }
+
+  .container.light {
+    max-width: 250px;
+    margin-top: -70px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    color: var(--black);
+  }
+}
+
+@media (min-width: 720px) {
+  section {
+    display: grid;
+    position: relative;
+    background: url(images/background.svg) no-repeat center/cover;
+    background-position-y: -175px;
+    width: 100vw;
+    min-height: 100vh;
+    transition: background 0.5s;
+  }
+
+  section.light {
+    position: relative;
+    background: url(images/background1.svg) no-repeat center/cover;
+    background-position-y: -175px;
+    width: 100vw;
+    min-height: 100vh;
+    /* height: 100vh; */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.11);
+  }
+
+  .container {
+    max-width: 350px;
+    margin-top: 79px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    color: var(--grey);
+  }
+
+  .container.light {
+    max-width: 350px;
+    margin-top: 79px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    color: var(--black);
+  }
+
+  /* fonts */
+
+  h1 {
+    font-size: 2.5rem;
+
+    margin-top: 1.5rem;
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+
+    color: var(--grey);
+    text-decoration: none;
+    font-size: 1.5rem;
+
+    margin-top: 0.25rem;
+  }
+
+  a.git img {
+    content: url(/images/github\ 2.svg);
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  a.light {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+
+    color: var(--black);
+    text-decoration: none;
+    font-size: 1.5rem;
+
+    margin-top: 0.25rem;
+  }
+
+  a.light img {
+    content: url(/images/githubblack.svg);
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  p {
+    margin-top: 2rem;
+    /* font-size: 1.6rem; */
+  }
+}
+
+@media (min-width: 1349px) {
+  /* estilos versão desktop */
+
+  main {
+    background: hsl(240, 6%, 13%);
+    transition: background 0.5s;
+  }
+
+  main.light {
+    background: var(--grey);
+  }
+
+  section {
+    display: grid;
+    position: relative;
+    background: url(images/Desktop.svg);
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    /* height: 820px; */
+    min-height: 100vh;
+    transition: background 0.5s;
+  }
+
+  section.light {
+    position: relative;
+    background: url(images/DesktopWhite.svg) no-repeat center/cover;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    /* height: 820px; */
+    min-height: 100vh;
+  }
+
+  .container {
+    max-width: 300px;
+    margin-top: -58px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    color: var(--grey);
+  }
+
+  .container.light {
+    max-width: 300px;
+    margin-top: -58px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    color: var(--black);
+  }
+
+  /* fonts */
+
+  h1 {
+    font-size: 1.5rem;
+
+    margin-top: 1.5rem;
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+
+    color: var(--grey);
+    text-decoration: none;
+
+    margin-top: 0.25rem;
+  }
+
+  a.git img {
+    content: url(/images/github\ 2.svg);
+  }
+
+  a.light {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+
+    color: var(--black);
+    text-decoration: none;
+
+    margin-top: 0.25rem;
+  }
+
+  a.light img {
+    content: url(/images/githubblack.svg);
+  }
+
+  p {
+    margin-top: 2rem;
+  }
+
+  .toggle {
+    position: absolute;
+    top: 62px;
+    right: 196px;
+    background: linear-gradient(122.5deg, #ff0095 15.69%, #ffce1e 107.51%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    box-shadow: 0 0px 25px rgba(124, 71, 2, 0.159);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .toggle::before {
+    content: url(/images/brightness.png);
+  }
+
+  section.light .toggle {
+    position: absolute;
+    top: 62px;
+    right: 196px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  section.light .toggle::before {
+    content: url(/images/night-mode.png);
+  }
 }

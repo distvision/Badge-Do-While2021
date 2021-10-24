@@ -30,3 +30,17 @@ function getGithubProfileInfos() {
 }
 
 getGithubProfileInfos()
+
+const main = document.querySelector('.body')
+const sec = document.querySelector('.sec')
+const container = document.querySelector('.container')
+const gitlink = document.querySelector('.git')
+
+// const change = document.querySelector('.sec')
+const toggle = document.querySelector('.toggle')
+toggle.onclick = function () {
+  sec.classList.toggle('light')
+  main.classList.toggle('light')
+  container.classList.toggle('light')
+  gitlink.classList.toggle('light')
+}
